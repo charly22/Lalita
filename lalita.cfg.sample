@@ -1,0 +1,191 @@
+# -*- coding: utf8 -*-
+
+# Copyright 2009 laliputienses
+# License: GPL v3
+# For further info, see LICENSE file
+
+# Global Configuration Settings
+command_char = '@'
+
+# Servers Configuration Settings
+servers = {
+        'localhost': dict (
+            encoding='utf8',
+            host='127.0.0.1', port=6667,
+            nickname='examplia',
+            ircmaster='facundobatista',
+            indirect_command=True,
+            lang='es',
+            channels= {
+                '#humites': dict (plugins={
+                    'lalita.plugins.url.Url': { },
+                }),
+                '#perrites': dict (
+                    lang='en',
+                    plugins={
+                        # two shelves are going to be created (iolog and saylog)
+                        'lalita.plugins.seen.Seen': {'base_dir':'/tmp'},
+                }),
+            },
+            plugins= {
+                # 'url.Url': { },
+                'lalita.plugins.photo.Photo': { },
+                'lalita.plugins.misc.Ping': { },
+            },
+        ),
+        'example': dict (
+            encoding='utf8',
+            host='10.100.0.156', port=6667,
+            nickname='examplia',
+            channels= {
+                '#humites': dict(plugins={}),
+            },
+            plugins= {
+                'lalita.plugins.example.Example': { },
+            },
+        ),
+        'private-server': dict (
+            encoding='utf8',
+            host='10.100.0.156', port=6667,
+            nickname='examplia',
+            ssl=True,
+            password='aprivateserver',
+            channels= {
+                '#humites': dict(plugins={}),
+            },
+            plugins= {
+                'lalita.plugins.example.Example': { },
+            },
+        ),
+        'freenode': dict (
+            encoding='utf8',
+            host='irc.freenode.net', port=6667,
+            nickname='lalita',
+            channels= {
+                '#not-grulic': dict (plugins={
+                    #'url.Url': { },
+                    #'seen.Seen': { },
+                }),
+                '#pyar': dict (plugins={
+                    #'url.Url': { },
+                    #'seen.Seen': { },
+                }),
+            },
+            plugins= {
+                'lalita.plugins.freenode.Register': { 'password': 'zaraza' },
+                'lalita.plugins.url.Url': { },
+                'lalita.plugins.seen.Seen': { },
+                'lalita.plugins.misc.Ping': { },
+            },
+        ),
+        'perrito':{
+            'encoding': 'utf8',
+            'host' : "10.100.0.156",
+            'port' : 6667,
+            'nickname' : "morelia",
+            'channels':{
+                '#humites':{
+                    'plugins':{
+                        'lalita.plugins.url.Url': dict (
+                            database= 'url_public',
+                        ),
+                        'lalita.plugins.seen.Seen': {},
+                    },
+                    'encoding': 'utf8',
+                    },
+                '#perrites':{
+                    'encoding': 'utf8',
+                    'plugins':{
+                        'lalita.plugins.url.Url': dict (
+                            database= 'url_perrites_private',
+                        ),
+                    },
+                    },
+                },
+            'plugins':{
+                'lalita.plugins.url.Url': dict (
+                    database= 'url_public',
+                ),
+                'lalita.plugins.seen.Seen': {},
+                }
+            },
+        'testbot-a':{
+            'encoding': 'utf8',
+            'host' : "10.100.0.175",
+            'port' : 6667,
+            'nickname' : "itchy",
+            'channels':{
+                '#humites':{
+                    'plugins': {}
+                    },
+                },
+            'plugins':{
+                'lalita.plugins.deathmatch.TestPlugin': {'other': 'scratchy'}
+                },
+            'plugins_dir': "./lalita/core/tests/plugins",
+            },
+        'testbot-b':{
+            'encoding': 'utf8',
+            'host' : "10.100.0.175",
+            'port' : 6667,
+            'nickname' : "scratchy",
+            'channels':{
+                '#humites':{
+                    'plugins': {}
+                    },
+                },
+            'plugins':{
+                'lalita.plugins.deathmatch.TestPlugin': {'other':'itchy'}
+                },
+            'plugins_dir': "./lalita/core/tests/plugins",
+            },
+        'perrito1':{
+            'encoding': 'utf8',
+            'host' : "10.100.0.194",
+            'port' : 6668,
+            'nickname' : "lolita",
+                'channels':{
+                    '#humites':{
+                        'plugins':{ 'lalita.plugins.Log':{} },
+                        'encoding': 'utf8',
+                        },
+                    '#perrites':{
+                        'plugins':{ 'lalita.plugins.Log':{} }
+                        }
+                    },
+                'plugins':{
+                    'lalita.plugins.Log': {}
+                    }
+                },
+        'pyar2':{
+            'encoding': 'utf8',
+            'host' : "irc.freenode.net",
+            'port' : 6667,
+            'nickname' : "apu",
+            'channels':{
+                'pyar':{
+                    'plugins':{ 'lalita.plugins.Log':{} },
+                    'encoding': 'utf8',
+                    },
+                },
+            'plugins':{
+                'lalita.plugins.Log': {}
+                }
+            },
+        'javito':{
+            'encoding': 'utf8',
+            'host' : "10.100.0.156",
+            'port' : 6667,
+            'nickname' : "manyula",
+            'channels':{
+                '#humites':{
+                    'plugins':{
+                        'lalita.plugins.randomer.Randomer': dict (
+                            database= 'url_public',
+                        )
+                    },
+                    'encoding': 'utf8',
+                    },
+                },
+        }
+        }

@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: lalita
+Version: 0.1.3
+Summary: Yet another IRC bot.
+Home-page: https://launchpad.net/lalita/
+Author: Facundo Batista
+Author-email: facundo@taniquetil.com.ar
+License: GPL v3
+Description: Yet another IRC bot, one where new functionality is simple to create just adding easy-to-write plugins.
+Keywords: irc,bot,twisted,plugin
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Framework :: Twisted
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python
+Classifier: Topic :: Communications :: Chat :: Internet Relay Chat
+Requires: twisted
+Requires: beautifulsoup
+Requires: chardet
