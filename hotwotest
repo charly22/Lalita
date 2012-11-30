@@ -1,0 +1,7 @@
+PYTHONPATH=. python lalita/ircbot.py --manhole lalita/lalita.cfg freenode
+
+https://launchpad.net/lalita
+
+http://www.taniquetil.com.ar/lalita/tutorial_sp.html
+
+Channel: #alalitatest
