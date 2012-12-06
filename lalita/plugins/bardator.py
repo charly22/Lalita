@@ -12,7 +12,12 @@ class Bardator(Plugin):
 	def init(self, config):
 		self.users = dict()
 		self.register(self.events.COMMAND, self.bard, ['bard'])
-		self.bards = [u"Muchachooo hay que tener cuidadín"]
+		self.bards = [
+			u"muchachooo hay que tener cuidadín",
+			u"virgen",
+			u"que ágil",
+			u"que tipo de mierda",
+		]
 
 	def bard(self, user, channel, command, *args):
 		for user in args:
