@@ -14,7 +14,7 @@ class Bardator(Plugin):
 		self.register(self.events.COMMAND, self.bard, ['bard'])
 		self.bards = [
 			u"muchachooo hay que tener cuidadín",
-			u"virgen",
+			u"VIRGEN!",
 			u"que ágil",
 			u"que tipo de mierda",
 		]
