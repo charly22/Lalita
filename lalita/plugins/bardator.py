@@ -27,6 +27,8 @@ class Bardator(Plugin):
 			u"G": u"GAAAAAAY http://bit.ly/127JH4n",
 			u"UN": u"ULTRA NEEEERD http://bit.ly/VCfgDn",
 			u"AHH": u"AHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!! http://bit.ly/Uje2WI",
+			u"E": u"Entendiiiido http://bit.ly/Uje2WI",
+			u"D": u"http://bit.ly/QNdTzb",
 		}
 
 	def bard(self, user, channel, command, *args):
