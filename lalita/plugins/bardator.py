@@ -23,16 +23,15 @@ class Bardator(Plugin):
 			u"que tipo de mierda",
 		]
 		self.specific_bards = {
-			u"UG": u"ULTRA GAAAY!",
-			u"G": u"GAAAAAAY",
-			u"UN": u"ULTRA NEEEERD",
-			u"AHH": u"AHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!!",
+			u"UG": u"ULTRA GAAAY! http://bit.ly/11RY2CF",
+			u"G": u"GAAAAAAY http://bit.ly/127JH4n",
+			u"UN": u"ULTRA NEEEERD http://bit.ly/VCfgDn",
+			u"AHH": u"AHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!! http://bit.ly/Uje2WI",
 		}
 
 	def bard(self, user, channel, command, *args):
 		if len(args) > 1:
 			user = args[0]
-
 			if len(args) == 2:
 				# @bard olapic jorgemudry AHH
 				command = args[1]
@@ -48,15 +47,15 @@ class Bardator(Plugin):
 		bard = choice(self.bards)
 		self.say(channel, u"%s %s", user, bard)
 
-	
+
 	def private_bard(self, user, message):
 		regex = re.compile('^\@bard\s(?P<channel>[\w]+)\s(?P<user>[a-zA-Z0-9\-\_]+)\s?(?:(?P<command>[\w]+))?$')
 		r = regex.search(message.strip())
 		if r.groupdict():
 			channel = r.groupdict()['channel']
-			channel = unicodedata.normalize('NFKD', channel).encode('ascii','ignore')
 			if not channel.startswith("#"):
 				channel = "#"+channel
+			channel = unicodedata.normalize('NFKD', channel).encode('ascii','ignore')
 			user = r.groupdict()['user']
 			command = r.groupdict()['command']
 			if command:
