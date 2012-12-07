@@ -23,26 +23,29 @@ class Bardator(Plugin):
 			u"que tipo de mierda",
 		]
 		self.specific_bards = {
-			u"UG": u"http://i2.kym-cdn.com/entries/icons/original/000/008/910/ultra-gay.png",
-			u"G": u"http://media.tumblr.com/tumblr_m9g64idfjp1qbnggp.jpg",
-			u"UN": u"http://cdn.memegenerator.net/instances/400x/23940800.jpg",
-			u"AHH": u"http://www.youtube.com/watch?v=xCoD-TELD0A",
+			u"UG": u"ULTRA GAAAY!",
+			u"G": u"GAAAAAAY",
+			u"UN": u"ULTRA NEEEERD",
+			u"AHH": u"AHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!!",
 		}
 
 	def bard(self, user, channel, command, *args):
-		if(len(args) > 1):
-			# @bard olapic jorgemudry AHH
-			channel = args[0]
-			user = args[1]
-			command = args[2]
-			self.param_bard(channel, user, command)
+		if len(args) > 1:
+			user = args[0]
+
+			if len(args) == 2:
+				# @bard olapic jorgemudry AHH
+				command = args[1]
+				self.param_bard(channel, user, command)
+			else:
+				# @bard olapic jorgemudry
+				self.random_bard(channel, user)
 		else:
 			for user in args:
 				self.random_bard(channel, user)
 	
 	def random_bard(self, channel, user):
 		bard = choice(self.bards)
-		channel = unicodedata.normalize('NFKD', channel).encode('ascii','ignore')
 		self.say(channel, u"%s %s", user, bard)
 
 	
@@ -51,6 +54,7 @@ class Bardator(Plugin):
 		r = regex.search(message.strip())
 		if r.groupdict():
 			channel = r.groupdict()['channel']
+			channel = unicodedata.normalize('NFKD', channel).encode('ascii','ignore')
 			if not channel.startswith("#"):
 				channel = "#"+channel
 			user = r.groupdict()['user']
@@ -63,5 +67,4 @@ class Bardator(Plugin):
 	def param_bard(self, channel, user, command):
 		if command in self.specific_bards:
 			bard = self.specific_bards[command]
-			channel = unicodedata.normalize('NFKD', channel).encode('ascii','ignore')
 			self.say(channel, u"%s %s", user, bard)
