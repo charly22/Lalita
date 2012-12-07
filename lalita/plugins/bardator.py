@@ -27,7 +27,7 @@ class Bardator(Plugin):
 			u"G": u"GAAAAAAY http://bit.ly/127JH4n",
 			u"UN": u"ULTRA NEEEERD http://bit.ly/VCfgDn",
 			u"AHH": u"AHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!! http://bit.ly/Uje2WI",
-			u"E": u"Entendiiiido http://bit.ly/Uje2WI",
+			u"E": u"Entendiiiido http://youtu.be/3R92ArVZhc4?t=2m30s",
 			u"D": u"http://bit.ly/QNdTzb",
 		}
 
