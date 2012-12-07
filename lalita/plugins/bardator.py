@@ -21,6 +21,7 @@ class Bardator(Plugin):
 			u"VIRGEN!",
 			u"que ágil",
 			u"que tipo de mierda",
+			u"me hacés mierda...",
 		]
 		self.specific_bards = {
 			u"UG": u"ULTRA GAAAY! http://bit.ly/11RY2CF",
@@ -29,6 +30,7 @@ class Bardator(Plugin):
 			u"AHH": u"AHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!! http://bit.ly/Uje2WI",
 			u"E": u"Entendiiiido http://bit.ly/ReCzC9",
 			u"D": u"http://bit.ly/QNdTzb",
+			u"LC": u"LCDTMAB!!! http://bit.ly/UKv3xU",
 		}
 
 	def bard(self, user, channel, command, *args):
