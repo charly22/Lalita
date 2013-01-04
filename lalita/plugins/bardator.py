@@ -32,6 +32,7 @@ class Bardator(Plugin):
 			u"D": u"http://bit.ly/QNdTzb",
 			u"LC": u"LCDTMAB!!! http://bit.ly/UKv3xU",
 			u"LP": u"LA HAS LIADO PARDA!! http://bit.ly/SRfVhA",
+			u"BUE": u"¯\_(ツ)_/¯",
 		}
 
 	def bard(self, user, channel, command, *args):
